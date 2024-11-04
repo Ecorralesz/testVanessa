@@ -1,0 +1,31 @@
+.artist-grid {
+    display: grid;
+    gap: 16px;
+    padding: 16px;
+    justify-content: center; 
+    align-items: center;    
+    max-width: 1200px;     
+    margin: auto;         
+  }
+  
+  @media (min-width: 1200px) {
+    /* Show 4 items on large screens */
+    .artist-grid {
+      grid-template-columns: repeat(4, 2fr);   
+    }
+  }
+  
+  @media (min-width: 768px) and (max-width: 1199px) {
+    /* Show 2 items on medium screens */
+    .artist-grid {
+      grid-template-columns: repeat(2, 2fr);
+    }
+  }
+  
+  @media (max-width: 767px) {
+    /* Show 1 item on small/mobile screens */
+    .artist-grid {
+      grid-template-columns: 2fr;
+    }
+  }
+  
