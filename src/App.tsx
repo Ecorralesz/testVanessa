@@ -8,6 +8,7 @@ import { Artist } from './types';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Row, Col, Modal, Button } from 'react-bootstrap';
 import 'bootswatch/dist/zephyr/bootstrap.min.css';
+import "./App.css"
 
 const App = () => {
     const [artists, setArtists] = useState<Artist[]>([]);
@@ -27,7 +28,7 @@ const App = () => {
         <Router>
             <Container fluid className="d-flex justify-content-center vh-100 vw-100">
                 <Row className="text-center">
-                    <Col>
+                    <Col style={{padding: "0"}}>
                         <Routes>
                             <Route
                                 path="/"

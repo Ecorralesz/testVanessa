@@ -1,6 +1,21 @@
-#root {
-  max-width: 100%;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
 }

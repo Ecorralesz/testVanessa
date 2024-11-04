@@ -41,7 +41,7 @@ const ArtistDetails: React.FC<ArtistDetailsProps> = ({ artists }) => {
                             variant="top"
                             src={album.strAlbumThumb || placeholderImage}
                             alt={`${album.strAlbum} cover`}
-                            style={{ objectFit: 'cover', maxHeight: '150px' }}
+                            style={{ objectFit: 'cover', maxHeight: '20rem' }}
                         />
                         <Card.Body>
                             <Card.Title>{truncate(album.strAlbum, 100)}</Card.Title>
