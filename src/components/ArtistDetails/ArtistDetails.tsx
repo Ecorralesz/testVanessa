@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { fetchAlbums } from '../api';
-import { Album, Artist } from '../types';
+import { fetchAlbums } from '../../api';
+import { Album, Artist } from '../../types';
 import Card from 'react-bootstrap/Card';
 import './ArtistDetails.css';
 import placeholderImage from '../assets/Qo5mfYDE5v-350.png';

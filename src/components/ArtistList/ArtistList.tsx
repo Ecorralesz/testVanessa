@@ -1,5 +1,5 @@
 import React from 'react';
-import { Artist } from '../types';
+import { Artist } from '../../types';
 import { useNavigate } from 'react-router-dom';
 import Card from 'react-bootstrap/Card';
 import './ArtistList.css';

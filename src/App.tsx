@@ -1,15 +1,15 @@
 import { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import SearchBar from './components/SearchBar';
-import ArtistList from './components/ArtistList';
-import ArtistDetails from './components/ArtistDetails';
+import SearchBar from './components/SearchBar/SearchBar';
+import ArtistList from './components/ArtistList/ArtistList';
+import ArtistDetails from './components/ArtistDetails/ArtistDetails';
 import { searchArtists } from './api';
 import { Artist, Album } from './types';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Row, Col, Modal, Button } from 'react-bootstrap';
 import 'bootswatch/dist/zephyr/bootstrap.min.css';
 import "./App.css"
-import AlbumDetails from './components/AlbumDetails';
+import AlbumDetails from './components/AlbumDetails/AlbumDetails';
 
 const App = () => {
     const [artists, setArtists] = useState<Artist[]>([]);

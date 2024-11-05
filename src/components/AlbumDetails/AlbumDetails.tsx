@@ -1,5 +1,5 @@
 import React from 'react';
-import { Album } from '../types';
+import { Album } from '../../types';
 import './AlbumDetails.css';
 
 interface AlbumDetailsProps {
