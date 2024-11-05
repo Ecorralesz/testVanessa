@@ -4,14 +4,16 @@ import SearchBar from './components/SearchBar';
 import ArtistList from './components/ArtistList';
 import ArtistDetails from './components/ArtistDetails';
 import { searchArtists } from './api';
-import { Artist } from './types';
+import { Artist, Album } from './types';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Row, Col, Modal, Button } from 'react-bootstrap';
 import 'bootswatch/dist/zephyr/bootstrap.min.css';
 import "./App.css"
+import AlbumDetails from './components/AlbumDetails';
 
 const App = () => {
     const [artists, setArtists] = useState<Artist[]>([]);
+    const [selectedAlbum, setSelectedAlbum] = useState<Album | null>(null); // New state for selected album
     const [showModal, setShowModal] = useState(false);
 
     const handleSearch = async (query: string) => {
@@ -34,6 +36,7 @@ const App = () => {
                                 path="/"
                                 element={
                                     <>
+                                        <h1>Look for your favorite Artist</h1>
                                         <SearchBar onSearch={handleSearch} />
                                         <ArtistList artists={artists} />
                                     </>
@@ -41,7 +44,11 @@ const App = () => {
                             />
                             <Route
                                 path="/:artistId"
-                                element={<ArtistDetails artists={artists} />}
+                                element={<ArtistDetails artists={artists} setSelectedAlbum={setSelectedAlbum} />} // Pass setSelectedAlbum as a prop
+                            />
+                            <Route
+                                path="/:artistId/:albumId" // New route for album details
+                                element={<AlbumDetails album={selectedAlbum} />} // Pass selectedAlbum as a prop
                             />
                         </Routes>
                     </Col>

@@ -11,11 +11,12 @@ export interface Artist {
 }
 
 export interface Album {
-    id: string;
+    idAlbum: string;
     title: string;
     releaseYear: number;
     strAlbum:string;
     strAlbumThumb: string;
     intYearReleased: string;
     strDescriptionEN: string;
+    strArtist: string;
 }

@@ -23,7 +23,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
             />
-            <Button variant="outline-secondary" id="search-button" onClick={handleSearch}>
+            <Button variant="secondary" id="search-button" onClick={handleSearch}>
                 Search
             </Button>
         </InputGroup>
