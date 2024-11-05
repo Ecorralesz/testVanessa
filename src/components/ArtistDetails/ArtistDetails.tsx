@@ -4,7 +4,7 @@ import { fetchAlbums } from '../../api';
 import { Album, Artist } from '../../types';
 import Card from 'react-bootstrap/Card';
 import './ArtistDetails.css';
-import placeholderImage from '../assets/Qo5mfYDE5v-350.png';
+import placeholderImage from '../../assets/images/Qo5mfYDE5v-350.png';
 
 interface ArtistDetailsProps {
     artists: Artist[];
